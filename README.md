@@ -10,6 +10,9 @@
 * Markdown
 * Makefile
 
+![File](http://bit.ly/1mK8OGv)
+![Directory](http://bit.ly/1mK8mZ1)
+
 Furthermore it brings you some nice themes and is powered by
 [vundle](https://github.com/gmarik/vundle.vim).
 
