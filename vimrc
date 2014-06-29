@@ -50,6 +50,7 @@ syntax on
 colorscheme busierbee
 
 " disable background color
+hi Visual ctermfg=180 ctermbg=240
 hi Normal ctermfg=none ctermbg=none
 hi NonText ctermfg=none ctermbg=none
 
@@ -57,7 +58,7 @@ hi NonText ctermfg=none ctermbg=none
 set nobackup
 set noswapfile
 
-" show numbers
+" show line number
 set number
 
 " indention
