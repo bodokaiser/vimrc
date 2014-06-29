@@ -10,7 +10,7 @@ rm -rf $HOME/.vimrc || echo "Removing .vimrc failed!"
 echo "Removed old vim files."
 
 # copy complete directory
-cp -r -- $SCRIPTDIR $HOME/.vim || echo "Copying to .vim fialed!"
+cp -r -- $SCRIPTDIR $HOME/.vim || echo "Copying to .vim failed!"
 echo "Copied new vim files."
 
 # link entry files
