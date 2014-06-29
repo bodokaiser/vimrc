@@ -12,8 +12,7 @@ Bundle 'gmarik/vundle.vim'
 " workflow
 Bundle 'kien/ctrlp.vim'
 Bundle 'townk/vim-autoclose'
-Bundle 'scroolose/syntastic'
-Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'scrooloose/syntastic'
 
 " language
 Bundle 'othree/html5.vim'
@@ -22,7 +21,7 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'jelera/vim-javascript-syntax'
-Bundle 'skammer/vim-css-color'
+Bundle 'ap/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
 
 " interface
@@ -37,6 +36,10 @@ Bundle 'xolox/vim-colorscheme-switcher'
 
 call vundle#end()
 
+let g:vim_markdown_folding_disabled=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#syntastic#enabled=1
+
 filetype plugin on
 filetype indent on
 
@@ -48,9 +51,13 @@ hi Normal ctermfg=none ctermbg=none
 hi NonText ctermfg=none ctermbg=none
 
 set number
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set smartindent
 set laststatus=2
 set ttimeoutlen=50
 set backspace=indent,eol,start
 
-let g:vim_markdown_folding_disabled=1
-let g:airline#extensions#tabline#enabled = 1
+autocmd FileType make,python setlocal noexpandtab
+autocmd FileType html,json,javascript setlocal tabstop=2 shiftwidth=2
