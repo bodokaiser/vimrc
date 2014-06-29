@@ -75,5 +75,5 @@ set ttimeoutlen=50
 set backspace=indent,eol,start
 
 " overwrite indention for specific files
-autocmd FileType make,python setlocal noexpandtab
+autocmd FileType go,make,python setlocal noexpandtab
 autocmd FileType html,json,javascript setlocal tabstop=2 shiftwidth=2
