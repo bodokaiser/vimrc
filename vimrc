@@ -33,3 +33,7 @@ filetype plugin indent on
 syntax on
 
 colorscheme busierbee
+
+hi Normal ctermfg=none ctermbg=none
+
+set backspace=indent,eol,start
