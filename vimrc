@@ -17,13 +17,13 @@ Bundle 'yggdroot/indentline'
 
 " language
 Bundle 'othree/html5.vim'
+Bundle 'fatih/vim-go'
 Bundle 'leshill/vim-json'
-Bundle 'jnwhiteh/vim-golang'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'plasticboy/vim-markdown'
-Bundle 'jelera/vim-javascript-syntax'
 Bundle 'ap/vim-css-color'
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'jelera/vim-javascript-syntax'
 
 " interface
 Bundle 'bling/vim-airline'
@@ -37,6 +37,8 @@ Bundle 'xolox/vim-colorscheme-switcher'
 
 call vundle#end()
 
+" configure plugins
+let g:go_play_open_browser=0
 let g:syntastic_check_on_wq=0
 let g:vim_markdown_folding_disabled=1
 let g:airline#extensions#tabline#enabled = 1
