@@ -47,17 +47,30 @@ syntax on
 
 colorscheme busierbee
 
+" disable background color
 hi Normal ctermfg=none ctermbg=none
 hi NonText ctermfg=none ctermbg=none
 
+" disable files
+set nobackup
+set noswapfile
+
+" show numbers
 set number
+
+" indention
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set smartindent
+
+" this is for airline
 set laststatus=2
 set ttimeoutlen=50
+
+" threat backspace as backspace
 set backspace=indent,eol,start
 
+" overwrite indention for specific files
 autocmd FileType make,python setlocal noexpandtab
 autocmd FileType html,json,javascript setlocal tabstop=2 shiftwidth=2
