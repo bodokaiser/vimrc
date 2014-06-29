@@ -29,6 +29,12 @@ and then call `make` to copy all files to `~/.vimrc`
 
     $ cd vimrc && make
 
+now install all bundles
+
+    $ vim +PluginInstall +qall
+
+*Note that this will give an error message the first time. Just ignore it...*
+
 ## License
 
 Copyright 2014 Bodo Kaiser <i@bodokaiser.io>
