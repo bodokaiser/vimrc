@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'townk/vim-autoclose'
 Bundle 'scrooloose/syntastic'
+Bundle 'yggdroot/indentline'
 
 " language
 Bundle 'othree/html5.vim'
@@ -36,6 +37,7 @@ Bundle 'xolox/vim-colorscheme-switcher'
 
 call vundle#end()
 
+let g:syntastic_check_on_wq=0
 let g:vim_markdown_folding_disabled=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled=1
