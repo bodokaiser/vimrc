@@ -94,12 +94,12 @@ set backspace=indent,eol,start
 
 " use real tabs for these languages
 autocmd FileType go,make,python
-			\ setlocal noexpandtab
+			\ set noexpandtab
 
 " use two spaces for these languages
 autocmd FileType html,json,javascript
-			\ setlocal tabstop=2
-			\ setlocal shiftwidth=2
+			\ set tabstop=2 |
+			\ set shiftwidth=2
 
 " restore last cursor position when reopening file
 autocmd BufReadPost *
