@@ -76,6 +76,17 @@ set ttimeoutlen=50
 " threat backspace as backspace
 set backspace=indent,eol,start
 
-" overwrite indention for specific files
-autocmd FileType go,make,python setlocal noexpandtab
-autocmd FileType html,json,javascript setlocal tabstop=2 shiftwidth=2
+" use real tabs for these languages
+autocmd FileType go,make,python
+			\ setlocal noexpandtab
+
+" use two spaces for these languages
+autocmd FileType html,json,javascript
+			\ setlocal tabstop=2
+			\ setlocal shiftwidth=2
+
+" restore last cursor position when reopening file
+autocmd BufReadPost *
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \ exe "normal g'\"" |
+            \ endif
