@@ -37,7 +37,6 @@ Bundle 'xolox/vim-colorscheme-switcher'
 
 call vundle#end()
 
-" configure plugins
 let g:go_play_open_browser=0
 let g:syntastic_check_on_wq=0
 let g:vim_markdown_folding_disabled=1
@@ -53,6 +52,7 @@ colorscheme busierbee
 
 " disable background color
 hi Visual ctermfg=180 ctermbg=240
+hi Folded ctermfg=066 ctermbg=none
 hi Normal ctermfg=none ctermbg=none
 hi NonText ctermfg=none ctermbg=none
 
@@ -60,8 +60,24 @@ hi NonText ctermfg=none ctermbg=none
 set nobackup
 set noswapfile
 
-" show line number
+" disable fill char
+set fillchars=
+
+" enable line numbers
 set number
+
+" enable code folding
+set foldenable
+set foldlevel=0
+set foldnestmax=1
+set foldopen=all
+set foldclose=all
+set foldmethod=indent
+set foldtext=FoldText()
+
+function FoldText()
+    return '  // ...'
+endfunction
 
 " indention
 set expandtab
