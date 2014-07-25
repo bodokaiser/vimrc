@@ -37,9 +37,17 @@ Bundle 'xolox/vim-colorscheme-switcher'
 
 call vundle#end()
 
+" go plugin settings
+let g:go_bin_path = expand("~/bin")
 let g:go_play_open_browser=0
+
+" dont check syntax on exit - takes too much time
 let g:syntastic_check_on_wq=0
+
+" disable markdown folding
 let g:vim_markdown_folding_disabled=1
+
+" enable airline plugin
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled=1
 
@@ -66,24 +74,15 @@ set fillchars=
 " enable line numbers
 set number
 
-" enable code folding
-set foldenable
-set foldlevel=0
-set foldnestmax=1
-set foldopen=all
-set foldclose=all
-set foldmethod=indent
-set foldtext=FoldText()
-
-function FoldText()
-    return '  // ...'
-endfunction
-
 " indention
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set smartindent
+
+" code width
+set textwidth=80
+set colorcolumn=80
 
 " this is for airline
 set laststatus=2
