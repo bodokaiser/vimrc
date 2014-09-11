@@ -7,38 +7,39 @@ set runtimepath+=~/.vim/bundle/vundle.vim/
 call vundle#begin()
 
 " core
-Bundle 'gmarik/vundle.vim'
+Plugin 'gmarik/vundle.vim'
 
 " workflow
-Bundle 'kien/ctrlp.vim'
-Bundle 'townk/vim-autoclose'
-Bundle 'scrooloose/syntastic'
-Bundle 'yggdroot/indentline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'townk/vim-autoclose'
+Plugin 'scrooloose/syntastic'
+Plugin 'yggdroot/indentline'
 
 " language
-Bundle 'othree/html5.vim'
-Bundle 'fatih/vim-go'
-Bundle 'leshill/vim-json'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'ap/vim-css-color'
-Bundle 'hail2u/vim-css3-syntax'
-Bundle 'jelera/vim-javascript-syntax'
+Plugin 'othree/html5.vim'
+Plugin 'fatih/vim-go'
+Plugin 'leshill/vim-json'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'ap/vim-css-color'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'jelera/vim-javascript-syntax'
 
 " interface
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
 
 " colorschemes
-Bundle 'flazz/vim-colorschemes'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-colorscheme-switcher'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-colorscheme-switcher'
 
 call vundle#end()
 
 " go plugin settings
 let g:go_bin_path = expand("~/bin")
+let g:go_fmt_command = "goimports"
 let g:go_play_open_browser=0
 
 " dont check syntax on exit - takes too much time
