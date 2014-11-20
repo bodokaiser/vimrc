@@ -19,6 +19,7 @@ Plugin 'yggdroot/indentline'
 Plugin 'othree/html5.vim'
 Plugin 'fatih/vim-go'
 Plugin 'leshill/vim-json'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ap/vim-css-color'
@@ -40,10 +41,15 @@ call vundle#end()
 " go plugin settings
 let g:go_bin_path = expand("~/bin")
 let g:go_fmt_command = "goimports"
-let g:go_play_open_browser=0
+let g:go_play_open_browser=1
+let g:go_highlight_methods=1
+let g:go_highlight_operators=1
+let g:go_highlight_functions=1
 
 " dont check syntax on exit - takes too much time
 let g:syntastic_check_on_wq=0
+let g:syntastic_enable_signs=1
+let g:syntastic_java_checkers=[]
 
 " disable markdown folding
 let g:vim_markdown_folding_disabled=1
@@ -82,8 +88,8 @@ set shiftwidth=4
 set smartindent
 
 " code width
-set textwidth=80
-set colorcolumn=80
+set textwidth=120
+set colorcolumn=120
 
 " this is for airline
 set laststatus=2
@@ -97,12 +103,20 @@ autocmd FileType go,make,python
 			\ set noexpandtab
 
 " use two spaces for these languages
-autocmd FileType html,json,javascript
+autocmd FileType ruby,html,json,javascript
 			\ set tabstop=2 |
 			\ set shiftwidth=2
+
+" use four spaces for these languages
+autocmd FileType css
+			\ set tabstop=4 |
+			\ set shiftwidth=4
 
 " restore last cursor position when reopening file
 autocmd BufReadPost *
             \ if line("'\"") > 0 && line("'\"") <= line("$") |
             \ exe "normal g'\"" |
             \ endif
+
+autocmd BufRead,BufNewFile *.html.*
+            \ set filetype=html
