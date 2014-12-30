@@ -101,17 +101,17 @@ set backspace=indent,eol,start
 
 " use real tabs for these languages
 autocmd FileType go,make
-			\ set noexpandtab
+			\ setlocal noexpandtab
 
 " use two spaces for these languages
 autocmd FileType ruby,html,json,jade,javascript
-			\ set tabstop=2 |
-			\ set shiftwidth=2
+			\ setlocal tabstop=2 |
+			\ setlocal shiftwidth=2
 
 " use four spaces for these languages
 autocmd FileType css
-			\ set tabstop=4 |
-			\ set shiftwidth=4
+			\ setlocal tabstop=4 |
+			\ setlocal shiftwidth=4
 
 " restore last cursor position when reopening file
 autocmd BufReadPost *
@@ -120,4 +120,4 @@ autocmd BufReadPost *
            \ endif
 
 autocmd BufRead,BufNewFile *.html.*
-            \ set filetype=html
+            \ setlocal filetype=html
