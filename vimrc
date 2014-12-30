@@ -25,6 +25,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'ap/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'julialang/julia-vim'
 
 " interface
 Plugin 'bling/vim-airline'
@@ -99,11 +100,11 @@ set ttimeoutlen=50
 set backspace=indent,eol,start
 
 " use real tabs for these languages
-autocmd FileType go,make,python
+autocmd FileType go,make
 			\ set noexpandtab
 
 " use two spaces for these languages
-autocmd FileType ruby,html,json,javascript
+autocmd FileType ruby,html,json,jade,javascript
 			\ set tabstop=2 |
 			\ set shiftwidth=2
 
@@ -114,9 +115,9 @@ autocmd FileType css
 
 " restore last cursor position when reopening file
 autocmd BufReadPost *
-            \ if line("'\"") > 0 && line("'\"") <= line("$") |
-            \ exe "normal g'\"" |
-            \ endif
+           \ if line("'\"") > 0 && line("'\"") <= line("$") |
+           \ exe "normal g'\"" |
+           \ endif
 
 autocmd BufRead,BufNewFile *.html.*
             \ set filetype=html

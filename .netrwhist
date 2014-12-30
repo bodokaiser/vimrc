@@ -1,8 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/bodokaiser/src/github.com/bodokaiser/studies'
-let g:netrw_dirhist_2='/Users/bodokaiser/Downloads/avr-libc-1.8.1'
-let g:netrw_dirhist_3='/Users/bodokaiser/.mono'
-let g:netrw_dirhist_4='/Users/bodokaiser/src/github.com/bodokaiser/studies'
-let g:netrw_dirhist_5='/Users/bodokaiser/src/github.com/bodokaiser/account'
-let g:netrw_dirhist_6='/Users/bodokaiser/src/github.com/bodokaiser/accouting'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/bodokaiser/src/github.com/bodokaiser/server'
+let g:netrw_dirhist_2='/Users/bodokaiser/src/github.com/bodokaiser/studies'
+let g:netrw_dirhist_3='/Users/bodokaiser/src/github.com/bodokaiser/ledger'
+let g:netrw_dirhist_4='/Users/bodokaiser/.vim'
