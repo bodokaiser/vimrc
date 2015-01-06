@@ -33,7 +33,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 
 " colorschemes
-Plugin 'flazz/vim-colorschemes'
+Plugin 'baskerville/bubblegum'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
 
@@ -56,7 +56,7 @@ let g:syntastic_java_checkers=[]
 let g:vim_markdown_folding_disabled=1
 
 " enable airline plugin
-let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#syntastic#enabled=1
 
 filetype plugin on
@@ -64,13 +64,9 @@ filetype indent on
 
 syntax on
 
-colorscheme busierbee
-
-" disable background color
-hi Visual ctermfg=180 ctermbg=240
-hi Folded ctermfg=066 ctermbg=none
-hi Normal ctermfg=none ctermbg=none
-hi NonText ctermfg=none ctermbg=none
+" color tuning
+set background=dark
+colorscheme bubblegum
 
 " disable files
 set nobackup
@@ -101,23 +97,23 @@ set backspace=indent,eol,start
 
 " use real tabs for these languages
 autocmd FileType go,make
-			\ setlocal noexpandtab
+            \ setlocal noexpandtab
 
 " use two spaces for these languages
 autocmd FileType ruby,html,json,jade,javascript
-			\ setlocal tabstop=2 |
-			\ setlocal shiftwidth=2
+            \ setlocal tabstop=2 |
+            \ setlocal shiftwidth=2
 
 " use four spaces for these languages
 autocmd FileType css
-			\ setlocal tabstop=4 |
-			\ setlocal shiftwidth=4
+            \ setlocal tabstop=4 |
+            \ setlocal shiftwidth=4
 
 " restore last cursor position when reopening file
 autocmd BufReadPost *
-           \ if line("'\"") > 0 && line("'\"") <= line("$") |
-           \ exe "normal g'\"" |
-           \ endif
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \ exe "normal g'\"" |
+            \ endif
 
 autocmd BufRead,BufNewFile *.html.*
             \ setlocal filetype=html
