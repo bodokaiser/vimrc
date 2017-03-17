@@ -19,13 +19,14 @@ Plugin 'yggdroot/indentline'
 Plugin 'othree/html5.vim'
 Plugin 'fatih/vim-go'
 Plugin 'leshill/vim-json'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'digitaltoad/vim-jade'
+"Plugin 'vim-ruby/vim-ruby'
+"Plugin 'digitaltoad/vim-jade'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ap/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'jelera/vim-javascript-syntax'
-Plugin 'julialang/julia-vim'
+" Plugin 'julialang/julia-vim'
+Plugin 'lervag/vimtex'
 
 " interface
 Plugin 'bling/vim-airline'
@@ -33,9 +34,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 
 " colorschemes
-Plugin 'baskerville/bubblegum'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-colorscheme-switcher'
+"Plugin 'baskerville/bubblegum'
+"Plugin 'xolox/vim-misc'
+"Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'jeffkreeftmeijer/vim-dim'
 
 call vundle#end()
 
